@@ -20,7 +20,7 @@ class Enviroment:
                 print(f"Enviroment : room {room} got dirty agin !")
         
     def display(self):
-        print(f"Adnt is in room {self.agent_location}")
+        print(f"Agent is in room {self.agent_location}")
         print(f"Room A: {self.rooms['A']}, Room B :{self.rooms['B']}")
     
     

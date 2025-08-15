@@ -16,7 +16,7 @@ class MapEnvironment:
         return self.graph.get(city, {})
 
     def get_cost(self, from_city, to_city):  # Fixed method name and typo
-        return self.graph[from_city].get(to_city, float('inf'))  # Corrected 'inft' to 'inf'
+        return self.graph[from_city].get(to_city, float('inf')) 
 
 class RouteFindingAgent:
     def __init__(self, environment):
@@ -63,3 +63,7 @@ cost = agent.calculate_cost(path)
 
 print(f"Path from {start_city} to {goal_city} : {path}")
 print(f"Total path cost : {cost}")
+
+
+
+#  route finding 
