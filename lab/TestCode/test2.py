@@ -1,14 +1,22 @@
-import numpy as np
-import matplotlib.pyplot as plt
-n = np.arange(-10, 11)
-x = np.array([abs(i) if -3 <= i <= 3 else 0 for i in n])
-def shift(x, n, shift_amount):
-    return np.array([x[n.tolist().index(k - shift_amount)] if (k - shift_amount) in n else 0 for k in n])
+import random 
+
+class Enviornment:
+    def __init__(self):
+        self.rooms={
+            'A':random.choice(['Dirty','Clean']),
+            'B':random.choice(['Dirty','Clean'])
+        }
+
+        self.aget_location=random.choice(['A','B'])
+
+    def is_dirty(self,location):
+        return self.rooms[location]=='Dirty'
+    def is_clean(self,location):
+        return self.rooms[location]=='Clean'
+    def move(self,new_location):
+        self.aget_location=new_location
 
 
-ya = x
-yb = shift(x, n, 1)
-yc = shift(x, n, -1)
-print(ya)
-print(yb)
-print(yc)
+class RF:
+    def __init__(self,env:Enviornment):
+        pass
