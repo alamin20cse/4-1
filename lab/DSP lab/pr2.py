@@ -16,7 +16,7 @@ titles = ['(a) y(n) = x(n)',
           '(c) y(n) = x(n + 1)',
           '(d) y(n) = (1/3)[x(n+1) + x(n) + x(n - 1)]',
           '(e) y(n) = max(x(n+1), x(n), x(n - 1))',
-          '(f) y(n) = cumulative sum of x(k)'
+          '(f) y(n) = cumulative sum of x(k)',
           ]
 
 results = [ya, yb, yc, yd, ye, yf]
