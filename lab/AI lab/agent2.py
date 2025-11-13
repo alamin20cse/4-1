@@ -37,6 +37,7 @@ class RouteFindingAgent:
 
                         
             return None
+        
         def calculate_cost(self,path):
             if not path or len(path)<2:
                 return 0

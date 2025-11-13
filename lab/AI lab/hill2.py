@@ -13,8 +13,17 @@ required_max = [2500, 200, 70]
 def objective_function(amounts):
     total_cost = sum(a*c for a,c in zip(amounts, costs) )
     nutrient_totals = [0]* len(nutrients)
-    for i in range(len(nutrients)):
-        nutrient_totals[i] = sum(amounts[j] * nutrients[i][j] for j in range(len(foods)))
+    # for i in range(len(nutrients)):
+    #     nutrient_totals[i] = sum(amounts[j] * nutrients[i][j] for j in range(len(foods)))
+
+
+    nutrient_totals = [0] * len(nutrients)
+
+    for i in range(len(nutrients)):            # nutrient index (যেমন calories, protein, fat)
+        total = 0                              # এই nutrient-এর total value
+        for j in range(len(foods)):            # প্রতিটি খাবারের জন্য
+            total += amounts[j] * nutrients[i][j]  # ওই nutrient-এর পরিমাণ যোগ করো
+        nutrient_totals[i] = total   
     penalty = 0
     for i in range (len(nutrients)):
         if nutrient_totals[i] < required_min[i]:

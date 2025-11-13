@@ -29,7 +29,8 @@ class ReflexVacuumAgent:
         location=env.agent_location
         if env.is_dirty(location):
             print(f"Action : Suck dirty room ")
-            env.is_clean(location)
+            # env.is_clean(location)
+            env.rooms[location] = 'Clean'
         elif location=='A':
             print(f'Action : Mov right to room  B ')
             env.move("B")
